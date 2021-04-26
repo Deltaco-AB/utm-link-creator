@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<title>Campaign Creator</title>
+</head>
+<body>
+	<form>
+		<h1>UTM Tag Creator</h1>
+		<label title="Unique name of the campaign, newsletter or post">Campaign name</label>
+		<input required type="text" name="campaign" placeholder="V.32 Back to School">
+		<label>Campaign type/medium</label>
+		<select required name="type">
+			<option disabled>Select a campaign type or medium</option>
+			<option value="email">Email (general)</option>
+			<option value="email_newsletter">Email Newsletter</option>
+			<option value="social_facebook">Facebook</option>
+			<option value="social_linkedin">LinkedIn</option>
+			<option value="social_instagram">Instagram</option>
+			<option value="social_twitter">Twitter</option>
+		</select>
+		<label>Full URL to destination</label>
+		<input required type="text" name="url" placeholder="https://www.example.com/link_here/with?queries=of_course">
+		<input type="submit" value="Create campaign URL">
+	</form>
+	<input readonly onfocus="this.select();" onmouseup="return false;" type="text" name="result" placeholder="...">
+	<input id="copy" type="button" value="Copy">
+	<script src="assets/js/script.js"></script>
+</body>
+</html>
